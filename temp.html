@@ -1,0 +1,80 @@
+<div class="comments-container">
+    <div class="comments-container-leftSide">
+            <div class="comments_image"></div>
+    </div>
+    <div  class="comments-container-rightSide">
+        <div class="comments-container-rightSide-head">
+            <div class="post_container comments_post_container_border">
+            <a href="#article${post["id"]}">
+                                <div id="post_author">
+                                    <div class="post_author_container">
+                                            <div class="post_author_inner">
+                                                <div class="post_author_icon"></div>
+                                                <img class="post_author_image" src="${post["author_img"]}" alt="" />
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="post_author_text">
+                                    <span id="post_author_name" class="post_author_text-name">${post["author"]}</span>
+                                    <div id="verified_svg"></div>
+                                    <span>&middot; ${post["since"]}</span>
+                                </div>
+                            </a>
+                            <a href="#article${post["id"]}">
+                                <div>
+                                    <div class="optionsSVG"></div>
+                                </div>
+                            </a>
+            </div>
+
+
+
+
+            <div class="post_author_contents">
+                <span id="post_author_name">junus.ergin</span>
+                <span id="post_author_description">Wie programmiere ich richtig?</span>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        
+        <div id="comment-section">Commentare, scrollbar</div>
+        
+        <div  class="comments-container-rightSide-foot">
+            <div>
+                <div class="post_container_svg">
+                    <div class="post_svg_container-left">
+                        <div class="svg_container">
+                            <div id="like0" class="like_svg"></div>
+                        </div>
+                        <div class="svg_container">
+                            <div id="comment0" class="comment_svg"></div>
+                        </div>
+                        <div class="svg_container">
+                            <div id="direct_svg"></div>
+                        </div>
+                    </div>
+                    <div class="post_svg_container-right">
+                        <div id="save0" class="save_svg"></div>
+                    </div>
+                </div>
+
+                <div class="post_likes_container">
+                    <div>Gefällt <span id="post_like_counter${post["id"]}">${post["like_counter"]}</span> Mal</div>
+                </div>
+
+                <div class="comment_container">
+                    <input id="comment_input0" type="text" required="" class="comment_input" placeholder="Kommentieren...">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

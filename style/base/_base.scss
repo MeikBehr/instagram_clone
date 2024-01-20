@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+@use "sass:math";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    display: inline-block;
+    color-scheme: light;
+
+    @media (max-width: 590px) {
+        font-size: 57.5%;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 50%;
+    }
+
+    @media (max-width: 510px) {
+        font-size: 47.5%;
+    }
+
+    @media (max-width: 470px) {
+        font-size: 45%;
+    }
+}
+
+
+body {
+    display: flex;
+    min-height: 100dvh;
+    width: 100%;
+    background-color: $backgroundcolor-bright;
+    color: $color-bright;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    overflow: visible;
+    direction: ltr;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: $color-bright;
+    cursor: pointer;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}

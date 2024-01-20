@@ -1,0 +1,13 @@
+INSTAGRAM		
+Summe = 26,00 Std.
+- davon HTML & CSS 	= 14,00 Std
+- davon JavaScript	= 12,00 Std
+
+	- Mittwoch	= 5,50 Std für HTML & CSS
+	- Donnerstag= 1,50 Std für HTML & CSS
+	- Freitag 	= 2,75 Std für HTML & CSS
+	- Samstag	= 2,75 Std für JS
+	- Sonntag	= 4,00 Std für JS-AddEventListner und HTML/CSS: responsiv
+	- Montag	= 4,50 Std für JS-inputfeld & Comment-Sektion sowie das HTML/CSS dazu
+	- Dienstag	= 2,00 Std für JS alles fertig machen, bug-fix - jetzt nur noch cleanCode und mehr Data
+	- Mittwoch	= 3,00 Std für JS Cleancoding

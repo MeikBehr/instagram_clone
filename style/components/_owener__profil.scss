@@ -1,0 +1,14 @@
+#owener__profil {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-image: url(../src/img/profil_pic.jpg);
+    transition: transform 0.25s ease-in-out;
+    .nav__options-containers:hover & {
+        transition: transform 0.25s ease-in-out;
+        transform: scale(1.1);
+    }
+}

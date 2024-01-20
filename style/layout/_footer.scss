@@ -1,0 +1,156 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:color";
+@use "sass:math";
+
+
+#footer {
+    display: none;
+    width: 30rem;
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    z-index: 1;
+    background-color: $backgroundcolor-bright;
+}
+
+.footer__user__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+
+#footer__owener__profil {
+    width: 4.4rem;
+    height: 4.4rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-image: url(../src/img/profil_pic.jpg);
+}
+
+
+.footer__user__container-profil-text {
+    font-weight: bold;
+    width: 15.5rem;
+    cursor: pointer;
+}
+
+
+
+@mixin suggestions() {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.footer__user-change {
+    color: rgb(0, 149, 246);
+    @include suggestions();
+
+    &:hover {
+        color: $color-secondary-bright;
+    }
+}
+
+
+
+
+.footer__suggestions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+    &-heading {
+        font-size: 1.4rem;
+        color: gray;
+    }
+}
+
+
+.footer__suggestions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    & a img {
+        border-radius: 50%;
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+
+}
+
+
+
+.footer__suggestions__heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer__suggestions-seeAll {
+    color: $color-bright;
+    @include suggestions();
+
+    &:hover {
+        color: $color-secondary-bright;
+    }
+}
+
+
+
+.footer__suggestions-follow {
+    color: rgb(0, 149, 246);
+    @include suggestions();
+
+    &:hover {
+        color: $color-bright;
+    }
+}
+
+
+.footer__suggestions-container-textcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+
+    & > span:nth-child(1) {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1.4rem;
+        cursor: pointer;
+        @include fontWithEllipsis;
+    }
+
+    & > span:nth-child(2) {
+        display: inline-block;
+        color: $color-secondary-bright;
+        font-weight: 400;
+        font-size: 1.2rem;
+        @include fontWithEllipsis;
+    }
+}
+
+
+.footer__footer {
+    color: rgba(200,200,200,1);
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    @include fontWithEllipsis;
+    user-select: none;
+
+    & a {
+        color: rgba(200,200,200,1);
+    }
+
+}

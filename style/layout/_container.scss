@@ -1,0 +1,275 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:color";
+@use "sass:math";
+
+
+
+
+$post_author__container_width: 4.4rem;
+$post_author__container_offset: 0.2rem;
+
+$filterInvert: invert(0%);
+
+
+
+.article_container {
+    margin-top: 2rem;
+    width: 47rem;
+
+    @media (max-width: 450px) {
+        width: 40rem;
+    }
+
+    @media (max-width: 360px) {
+        width: 37rem;
+    }
+
+    @media (min-width: 1200px) {
+        width: clamp(47rem, 40vw, 60rem);
+    }
+
+
+}
+
+
+.post_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.6rem;
+
+    & a:first-of-type {
+        display: flex;
+        align-items: center;
+    }
+}
+
+#post_author_name {
+    font-weight: bold;
+    color: $color-bright;
+}
+
+
+.post_author_text {
+    padding-right: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: $color-secondary-bright;
+    font-weight: 400;
+    line-height: 1.4rem;
+    font-size: 1.4rem;
+}
+
+
+.post_author_text-name {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+
+
+
+.post_author_inner {
+    position: relative;
+    width: $post_author__container_width;
+    height: $post_author__container_width;
+
+}
+
+
+.post_author_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 10000rem;
+    background: linear-gradient(to right, #d5d23a 0%,#d40689 100%);
+}
+
+
+.post_author_image {
+    position: absolute;
+    top: $post_author__container_offset;
+    left: $post_author__container_offset;
+    bottom: auto;
+    right: auto;
+    width: calc($post_author__container_width - 2 * $post_author__container_offset);
+    height: calc($post_author__container_width - 2 * $post_author__container_offset);
+    border: 2px solid white;;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+.content_followed__container-text33 {
+    text-align: center;
+    width: 8rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    @include fontWithEllipsis;
+}
+
+
+
+@mixin svg-container {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: $filterInvert;
+    cursor: pointer;
+  }
+
+
+.optionsSVG {
+    @include svg-container();
+    background-image: url(../src/img/svg/options.svg);
+}
+
+
+#verified_svg {
+    @include svg-container();
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+    background-image: url(../src/img/svg/verified.svg);
+}
+
+
+
+.content_container_image {
+    height: 58.7rem;
+    overflow: hidden;
+    background-color: $backgroundcolor-bright;
+    background-image: url(../src/img/posts_junus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.post_container_svg {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+
+.post_svg_container-left {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+
+    & div {
+        width: 2.5rem;
+        height: 2.5rem;
+        filter: invert(0%);
+        transition: filter 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+.svg_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+
+.post_svg_container-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    &:hover {
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.1);
+    }
+}
+
+
+.like_svg {
+    @include svg-container();
+    padding: 0.8rem;
+    background-image: url(../src/img/svg/like_not.svg);
+}
+                                    
+.comment_svg {
+    @include svg-container();
+    padding: 0.8rem;
+    background-image: url(../src/img/svg/kommentar.svg);
+}
+
+#direct_svg {
+    @include svg-container();
+    padding: 0.8rem;
+    background-image: url(../src/img/svg/direct.svg);
+}
+
+.save_svg {
+    @include svg-container();
+    padding: 0.8rem;
+    padding-right: 0;
+    background-image: url(../src/img/svg/save_not.svg);
+}
+
+
+.post_author_contents {
+    margin-top: 0.8rem;
+}
+
+
+#post_author_description {
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+    font-weight: 400;
+}
+
+
+.post_likes_container {
+    margin-top: 0.8rem;
+}
+
+
+.post_comments_container {
+    margin-top: 0.8rem;
+    color: $color-secondary-bright;
+    cursor: pointer;
+}
+
+
+.comment_input {
+    border: none;
+    padding: 0.5rem 0.5rem 1.5rem 0;
+    color: $color-bright;
+    text-decoration: none;
+    width: 75%;
+    
+    &::placeholder {
+        color: rgb(204,208,213);
+    }
+
+    &:focus {
+        outline: none;
+    }
+    
+}
